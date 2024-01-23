@@ -19,10 +19,17 @@ const App = () => {
         />
         <button type="submit">Submit</button>
       </form>
-      <ol key="relativeList">
+      <ol id="relativeList" key={"relativeList"}>
         {arr.length > 0 &&
           arr.map((item, index) => {
-            return <li key={"relativeListItem" + index}>{item}</li>;
+            return (
+              <li
+                id={"relativeListItem" + (index + 1)}
+                key={"relativeListItem" + (index + 1)}
+              >
+                {item}
+              </li>
+            );
           })}
       </ol>
     </div>
