@@ -7,7 +7,6 @@ const App = () => {
   function handle(e) {
     e.preventDefault();
     setArr([...arr, name]);
-    console.log(arr.length);
   }
   return (
     <div id="main">
@@ -19,13 +18,13 @@ const App = () => {
         />
         <button type="submit">Submit</button>
       </form>
-      <ol id="relativeList" key={"relativeList"}>
+      <ol id="relativeList" key="relativeList">
         {arr.length > 0 &&
           arr.map((item, index) => {
             return (
               <li
-                id={"relativeListItem" + (index + 1)}
-                key={"relativeListItem" + (index + 1)}
+                id={`relativeListItem${index + 1}`}
+                key={`relativeListItem${index + 1}`}
               >
                 {item}
               </li>
