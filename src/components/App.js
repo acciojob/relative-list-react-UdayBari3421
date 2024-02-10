@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const App = () => {
   const [name, setName] = useState("");
-  const [arr, setArr] = useState([]);
+  const [arr, setArr] = useState(["list"]);
 
   function handle(e) {
     e.preventDefault();
@@ -19,7 +19,7 @@ const App = () => {
         <button type="submit">Submit</button>
       </form>
       <ol id="relativeList" key="relativeList">
-        {arr.length > 1 &&
+        {arr.length >= 1 &&
           arr.map((item, index) => {
             return (
               <li
